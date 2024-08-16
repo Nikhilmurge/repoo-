@@ -22,7 +22,7 @@ public class Alert {
 		System.out.println(driver.switchTo().alert().getText());
 		driver.switchTo().alert().accept();
 		Thread.sleep(3000);
-	        driver.quit;
+	        
 
 	}
 
