@@ -1,0 +1,12 @@
+ ˛∫æ   4 s  projetc/Frame  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this Lprojetc/Frame; main ([Ljava/lang/String;)V 
+Exceptions  java/lang/Exception
+    )io/github/bonigarcia/wdm/WebDriverManager   chromedriver -()Lio/github/bonigarcia/wdm/WebDriverManager;
+     setup  'org/openqa/selenium/chrome/ChromeDriver
+  	   " ! org/openqa/selenium/WebDriver # $ manage )()Lorg/openqa/selenium/WebDriver$Options; & ( ' %org/openqa/selenium/WebDriver$Options ) * window (()Lorg/openqa/selenium/WebDriver$Window; , . - $org/openqa/selenium/WebDriver$Window /  maximize 1 *https://docs.oracle.com/javase/8/docs/api/   3 4 5 get (Ljava/lang/String;)V      ∏
+ 9 ; : java/lang/Thread < = sleep (J)V   ? @ A switchTo /()Lorg/openqa/selenium/WebDriver$TargetLocator; C packageListFrame E G F +org/openqa/selenium/WebDriver$TargetLocator H I frame 3(Ljava/lang/String;)Lorg/openqa/selenium/WebDriver; K 4//a[text()='java.applet' and @target="packageFramfffe"]
+ M O N org/openqa/selenium/By P Q xpath ,(Ljava/lang/String;)Lorg/openqa/selenium/By;   S T U findElement :(Lorg/openqa/selenium/By;)Lorg/openqa/selenium/WebElement; W Y X org/openqa/selenium/WebElement Z  click E \ ] ^ parentFrame !()Lorg/openqa/selenium/WebDriver; ` packageFrame b //span[text()='AppletStub'] E d e ^ defaultContent   g h  quit args [Ljava/lang/String; driver Lorg/openqa/selenium/WebDriver; 
+SourceFile 
+Frame.java InnerClasses Options TargetLocator Window !               /     *∑ ±    
+       	             	             ı     ç∏ ∂ ª Y∑ L+π  π % π + +0π 2  6∏ 8+π > Bπ D W+J∏ Lπ R π V +π > π [ W+π > _π D W+a∏ Lπ R π V  6∏ 8+π > π c W+π f ±    
+   :           &  ,  :  J  V  d  t  z  Ü  å         ç i j     k l   m    n o     &   p	 E   q	 ,   r	
